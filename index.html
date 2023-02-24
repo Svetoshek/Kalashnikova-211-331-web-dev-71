@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">To do List</a>
+            <form class="d-flex">
+                <button class="open_active"">Новая
+                    задача</button>
+            </form>
+        </div>
+        <div class=" action_bg">
+                    <form action="
+                http://tasks-api.std-900.ist.mospolytech.ru/api/tasks?api_key=50d2199a-42dc-447d-81ed-d68a443b697e"
+                        class="action_form" method="post" id="formElem">
+                        <label>
+                            <input type=" text" name="desc">
+                            <div class="label_text">
+                                Введите параметр desc:
+                            </div>
+                        </label>
+
+                        <label>
+                            <input type="number" name="id">
+                            <div class="label_text">
+                                Введите параметр id:
+                            </div>
+                        </label>
+
+                        <label>
+                            <input type="text" name="name">
+                            <div class="label_text">
+                                Введите параметр name:
+                            </div>
+                        </label>
+
+                        <label>
+                            <fieldset>
+                                <legend>Выберите параметр status: </legend>
+                                <div>
+                                    <input type="radio" id="to-do" name="status" value="to-do">
+                                    <label for="to-do">Выбор to-do</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="done" name="status" value="done" checked>
+                                    <label for="done">Выбор done</label>
+                                </div>
+                            </fieldset>
+                        </label>
+                        <button type="submit">Отправить</button>
+                    </form>
+        </div>
+    </nav>
+    <div class="dataRequest"></div>
+    <div class="container-tasks">
+        <div class="tasks">
+            <div class="ul"></div>
+        </div>
+    </div>
+    <div class="request"></div>
+
+
+
+    <button class="search-btn">Найти</button>
+    <input type="text" class="search-field">
+    <div class="search_id hidden" id="list"
+        data-url="http://tasks-api.std-900.ist.mospolytech.ru/api/tasks?api_key=50d2199a-42dc-447d-81ed-d68a443b697e">
+    </div>
+
+
+    <div class="get-task"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
