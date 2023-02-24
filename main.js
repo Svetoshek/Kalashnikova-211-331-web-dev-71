@@ -23,7 +23,6 @@ function sendReqestGet(method, url) {
   });
 }
 
-if (search - field != false)
   sendReqestGet("GET", requestURL)
     .then((data) => console.log(data))
     .catch((err) => console.log(err));
