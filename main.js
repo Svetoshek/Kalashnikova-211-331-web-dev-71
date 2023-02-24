@@ -29,26 +29,7 @@ if (search - field != false)
     .catch((err) => console.log(err));
 
 //request GET
-async function getRequest(data) {
-  let data = [];
-  for (let data of data) {
-    let request = fetch(requestURL).then(
-      (successResponse) => {
-        if (successResponse.status != 200) {
-          return null;
-        } else {
-          return successResponse.json();
-        }
-      },
-      (failResponse) => {
-        return null;
-      }
-    );
-    data.push(request);
-  }
-  let result = await Promise.all(data);
-  return result;
-}
+
 //-------------------------------------------
 //-------------------------------------------
 //-------------------------------------------
